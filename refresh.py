@@ -13,7 +13,8 @@ def get_bs(author, page=1):
     传入作者博客园的id，页数（不传页数则从第一页开始查找）
     如果存在下一页按钮，则递归调用自己获取下一页的数据
     '''
-    r = requests.get(f'https://www.cnblogs.com/{author}/default.html?page={page}')
+    r = requests.get(f'https://www.cnblogs.com/{author}/default.html/?page={page}')
+    # print(r.content)
     soup = BeautifulSoup(r.content, 'html5lib')
     # print(f'第{page}页：')
     data_print(soup)
@@ -26,7 +27,7 @@ def data_print(soup):  # 这里可以优化显示文章链接啥的
     '''
     with open('README.md', 'w') as f:
         sys.stdout = f  # Change the standard output to the file we created.
-
+        print('<h1>最近的笔记</h1>')
         for day in soup.select('div.day'):
             for date in day.select('div.dayTitle a'):# 每天只有一个日期
                 for aritle in day.select('a.postTitle2'): # 每天可能有多篇文章
@@ -35,4 +36,4 @@ def data_print(soup):  # 这里可以优化显示文章链接啥的
 
 
 if __name__ == "__main__":
-    get_bs('zjy4fun')
+    get_bs('realzhaijiayu')
