@@ -4,6 +4,8 @@
 from bs4 import BeautifulSoup
 import requests
 import sys
+import re
+import time
 
 original_stdout = sys.stdout  # Save a reference to the original standard output
 
@@ -29,9 +31,12 @@ def data_print(soup):  # 这里可以优化显示文章链接啥的
         sys.stdout = f  # Change the standard output to the file we created.
         print('## 最近的笔记')
         for day in soup.select('div.day'):
-            for date in day.select('div.dayTitle a'):# 每天只有一个日期
+            for date in day.select('div.dayTitle a'):
                 for aritle in day.select('a.postTitle2'): # 每天可能有多篇文章
-                        print('- ',date.text, ' ', '[', aritle.get_text().strip(), '](', aritle.get('href'), ')', sep='')
+                    date_text = re.search(r'(20\d{2})[/:-]([0-1]?\d)[/:-]([0-3]?\d)', date.get('href'))[0]
+                    timeArray = time.strptime(date_text, "%Y/%m/%d")
+                    strTime = time.strftime("%Y-%m-%d", timeArray)
+                    print('- ',strTime, ' ', '[', aritle.get_text().strip(), '](', aritle.get('href'), ')', sep='')
         sys.stdout = original_stdout  # Reset the standard output to its original value
 
 
