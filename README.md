@@ -1,4 +1,5 @@
 ## 最近的笔记
+- 2022-07-13 [禁用form表单自动提交的方法](https://www.cnblogs.com/realzhaijiayu/p/16472461.html)
 - 2022-02-09 [SQLyog输入括号卡顿问题解决方案](https://www.cnblogs.com/realzhaijiayu/p/15875320.html)
 - 2022-01-04 [复杂链表的复制](https://www.cnblogs.com/realzhaijiayu/p/15762024.html)
 - 2022-01-02 [反转链表](https://www.cnblogs.com/realzhaijiayu/p/15757607.html)
@@ -8,4 +9,3 @@
 - 2021-05-15 [【每日一题】13. 罗马数字转整数](https://www.cnblogs.com/realzhaijiayu/p/14770870.html)
 - 2021-05-14 [【每日一题】12. 整数转罗马数字](https://www.cnblogs.com/realzhaijiayu/p/14768113.html)
 - 2021-05-13 [【每日一题】1269. 停在原地的方案数](https://www.cnblogs.com/realzhaijiayu/p/14765663.html)
-- 2021-05-12 [【每日一题】1310. 子数组异或查询](https://www.cnblogs.com/realzhaijiayu/p/14759405.html)
