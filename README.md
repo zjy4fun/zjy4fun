@@ -1,4 +1,6 @@
 ## 最近的笔记
+- 2022-07-25 [js数据类型](https://www.cnblogs.com/realzhaijiayu/p/16519201.html)
+- 2022-07-25 [js闭包总结](https://www.cnblogs.com/realzhaijiayu/p/16519182.html)
 - 2022-07-25 [css对齐方式总结](https://www.cnblogs.com/realzhaijiayu/p/16518898.html)
 - 2022-07-25 [css Float总结](https://www.cnblogs.com/realzhaijiayu/p/16518682.html)
 - 2022-07-25 [css display总结](https://www.cnblogs.com/realzhaijiayu/p/16518603.html)
@@ -7,5 +9,3 @@
 - 2022-07-18 [script标签中的async和defer属性](https://www.cnblogs.com/realzhaijiayu/p/16489782.html)
 - 2022-07-13 [禁用form表单自动提交的方法](https://www.cnblogs.com/realzhaijiayu/p/16472461.html)
 - 2022-02-09 [SQLyog输入括号卡顿问题解决方案](https://www.cnblogs.com/realzhaijiayu/p/15875320.html)
-- 2022-01-04 [复杂链表的复制](https://www.cnblogs.com/realzhaijiayu/p/15762024.html)
-- 2022-01-02 [反转链表](https://www.cnblogs.com/realzhaijiayu/p/15757607.html)
