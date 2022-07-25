@@ -1,4 +1,5 @@
 ## 最近的笔记
+- 2022-07-25 [css对齐方式总结](https://www.cnblogs.com/realzhaijiayu/p/16518898.html)
 - 2022-07-25 [css Float总结](https://www.cnblogs.com/realzhaijiayu/p/16518682.html)
 - 2022-07-25 [css display总结](https://www.cnblogs.com/realzhaijiayu/p/16518603.html)
 - 2022-07-25 [css定位总结](https://www.cnblogs.com/realzhaijiayu/p/16518560.html)
@@ -8,4 +9,3 @@
 - 2022-02-09 [SQLyog输入括号卡顿问题解决方案](https://www.cnblogs.com/realzhaijiayu/p/15875320.html)
 - 2022-01-04 [复杂链表的复制](https://www.cnblogs.com/realzhaijiayu/p/15762024.html)
 - 2022-01-02 [反转链表](https://www.cnblogs.com/realzhaijiayu/p/15757607.html)
-- 2021-12-19 [Java并发编程学习资料](https://www.cnblogs.com/realzhaijiayu/p/15706641.html)
