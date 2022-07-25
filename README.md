@@ -1,4 +1,7 @@
 ## 最近的笔记
+- 2022-07-25 [css Float总结](https://www.cnblogs.com/realzhaijiayu/p/16518682.html)
+- 2022-07-25 [css display总结](https://www.cnblogs.com/realzhaijiayu/p/16518603.html)
+- 2022-07-25 [css定位总结](https://www.cnblogs.com/realzhaijiayu/p/16518560.html)
 - 2022-07-18 [浏览器输入一个url发生了哪些事情](https://www.cnblogs.com/realzhaijiayu/p/16489804.html)
 - 2022-07-18 [script标签中的async和defer属性](https://www.cnblogs.com/realzhaijiayu/p/16489782.html)
 - 2022-07-13 [禁用form表单自动提交的方法](https://www.cnblogs.com/realzhaijiayu/p/16472461.html)
@@ -6,6 +9,3 @@
 - 2022-01-04 [复杂链表的复制](https://www.cnblogs.com/realzhaijiayu/p/15762024.html)
 - 2022-01-02 [反转链表](https://www.cnblogs.com/realzhaijiayu/p/15757607.html)
 - 2021-12-19 [Java并发编程学习资料](https://www.cnblogs.com/realzhaijiayu/p/15706641.html)
-- 2021-12-19 [埃拉托色尼筛选法-java-测试位操作-测试编译器性能](https://www.cnblogs.com/realzhaijiayu/p/15706636.html)
-- 2021-06-23 [2021-06-22 总结](https://www.cnblogs.com/realzhaijiayu/p/14920949.html)
-- 2021-05-15 [【每日一题】13. 罗马数字转整数](https://www.cnblogs.com/realzhaijiayu/p/14770870.html)
