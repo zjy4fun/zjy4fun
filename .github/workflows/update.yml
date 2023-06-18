@@ -35,6 +35,7 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+        force: true
   wakatime:
     name: update wakatime data
     runs-on: ubuntu-latest
