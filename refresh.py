@@ -47,7 +47,7 @@ def data_print(blogs, issues):
 
         print('<table style="width: 100%;">\n<td style="width: 60%">\n\n')
 
-        print("📒 **recent notes**\n")
+        print("📒 **notes**\n")
         blog_count = 0
         for day in blogs.select('div.day'):
             for date in day.select('div.dayTitle a'):
@@ -61,7 +61,7 @@ def data_print(blogs, issues):
 
         print('\n</td>\n<td style="width: 60%">\n\n')
 
-        print("\n🕛 **recent todos**\n")
+        print("\n🕛 **todo**\n")
 
         # only show 6 issues
         issues = issues[:6]

@@ -1,7 +1,5 @@
 🌱 **last week**
 
-<table>
-<td>
 <!--START_SECTION:waka-->
 
 ```txt
@@ -17,8 +15,6 @@ HTML             2 hrs 12 mins   █░░░░░░░░░░░░░░�
 ```
 
 <!--END_SECTION:waka-->
-</td>
-</table>
 
 <table>
 <td style="width: 60%">
