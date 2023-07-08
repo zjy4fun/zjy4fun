@@ -2,18 +2,6 @@
 
 <!--START_SECTION:waka-->
 
-```txt
-From: 29 June 2023 - To: 06 July 2023
-
-Total Time: 52 hrs 53 mins
-
-JavaScript                 38 hrs 59 mins  ██████████████████▒░░░░░░   73.72 %
-WXML                       6 hrs 8 mins    ███░░░░░░░░░░░░░░░░░░░░░░   11.61 %
-Other                      4 hrs 5 mins    ██░░░░░░░░░░░░░░░░░░░░░░░   07.74 %
-HTML                       1 hr 24 mins    ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.65 %
-WXSS                       57 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.82 %
-```
-
 <!--END_SECTION:waka-->
 
 <table style="width: 100%;">
