@@ -2,18 +2,6 @@
 
 <!--START_SECTION:waka-->
 
-```txt
-From: 19 July 2023 - To: 26 July 2023
-
-Total Time: 39 hrs
-
-JavaScript                    12 hrs 45 mins  ████████▒░░░░░░░░░░░░░░░░   32.70 %
-Vue.js                        11 hrs 59 mins  ███████▓░░░░░░░░░░░░░░░░░   30.73 %
-TypeScript                    4 hrs 12 mins   ██▓░░░░░░░░░░░░░░░░░░░░░░   10.78 %
-Other                         3 hrs 53 mins   ██▒░░░░░░░░░░░░░░░░░░░░░░   09.99 %
-JSON                          1 hr 23 mins    █░░░░░░░░░░░░░░░░░░░░░░░░   03.58 %
-```
-
 <!--END_SECTION:waka-->
 
 <table style="width: 100%;">
