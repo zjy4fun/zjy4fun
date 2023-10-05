@@ -37,7 +37,7 @@ def get_bs(username, access_token):
             issues.extend(issues_response.json())
     # ------------  END   issues  ------------------
 
-    data_print(blogs, issues)
+    # data_print(blogs, issues)
 
 def data_print(blogs, issues):
     with open('README.md', 'w') as f:
