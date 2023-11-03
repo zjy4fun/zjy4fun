@@ -62,7 +62,7 @@ def get_old_waka_data():
     try:
         with open('README.md', 'r') as f:
             existing_content = f.read()
-            if "\n🌱 **last week**" in existing_content:
+            if "\n🌱 **上周**" in existing_content:
                 existing_content = existing_content.split("\n## 🌱 **last week**")[1]
                 return "\n## 🌱 **last week**" + existing_content
             else:
@@ -73,8 +73,8 @@ def get_old_waka_data():
 
 def data_print(blogs, issues):
     content = ''
-    content += '<table style="width: 100%;">\n<td style="width: 60%">\n\n'
-    content += "### 📒 **notes**\n"
+    # content += '<table style="width: 100%;">\n<td style="width: 60%">\n\n'
+    content += "## 📒 **笔记**\n"
     blog_count = 0
 
     for day in blogs.select('div.day'):
@@ -83,23 +83,23 @@ def data_print(blogs, issues):
                 temp = date.text.replace('\n', '')
                 date_obj = datetime.strptime(temp, '%Y年%m月%d日')
                 new_date_str = date_obj.strftime('%Y-%m-%d')
-                if blog_count < 6:
+                if blog_count < 10:
                     content += f'- `{new_date_str}`&nbsp;&nbsp;[{aritle.get_text().strip()}]({aritle.get("href")})\n'
                     blog_count += 1
-    content += '\n</td>\n<td style="width: 60%">\n\n'
-    content += "\n### 🕛 **todo**\n"
+    # content += '\n</td>\n<td style="width: 60%">\n\n'
+    content += "\n## 🕛 **待办**\n"
     # only show 6 issues
-    issues = issues[:6]
+    issues = issues[:10]
     # 如果 issuse 不足 6 个，用空位补齐
-    for i in range(6 - len(issues)):
-        issues.append({'title': 'TODO', 'html_url': 'https://github.com/zjy4fun/notes/issues', 'repository_url': '', 'created_at': '1990-01-01'})
+    # for i in range(6 - len(issues)):
+    #     issues.append({'title': 'TODO', 'html_url': 'https://github.com/zjy4fun/notes/issues', 'repository_url': '', 'created_at': '1990-01-01'})
     for issue in issues:
         # repo_name = issue['repository_url'].split("/")[-1]
         # username = issue['repository_url'].split("/")[-2]
         date = issue['created_at'].split("T")[0]
         content += f"- `{date}`&nbsp;&nbsp;[{issue['title']}]({issue['html_url']})\n"
 
-    content += '\n</td>\n</table>\n'
+    # content += '\n</td>\n</table>\n'
 
     return content
 
