@@ -51,8 +51,8 @@ def has_content_changed(new_content):
     try:
         with open('README.md', 'r') as f:
             existing_content = f.read()
-            if "\n🌱 **last week**" in existing_content:
-                existing_content = existing_content.split("\n## 🌱 **last week**")[0]
+            if "\n🌱 **上周**" in existing_content:
+                existing_content = existing_content.split("\n## 🌱 **上周**")[0]
             return existing_content != new_content
     except FileNotFoundError:
         # README.md doesn't exist yet, so content has definitely changed
@@ -63,13 +63,13 @@ def get_old_waka_data():
         with open('README.md', 'r') as f:
             existing_content = f.read()
             if "\n🌱 **上周**" in existing_content:
-                existing_content = existing_content.split("\n## 🌱 **last week**")[1]
-                return "\n## 🌱 **last week**" + existing_content
+                existing_content = existing_content.split("\n## 🌱 **上周**")[1]
+                return "\n## 🌱 **上周**" + existing_content
             else:
-                return "\n## 🌱 **last week**\n\n<!--START_SECTION:waka-->\n\n<!--END_SECTION:waka-->\n"
+                return "\n## 🌱 **上周**\n\n<!--START_SECTION:waka-->\n\n<!--END_SECTION:waka-->\n"
     except FileNotFoundError:
         # README.md doesn't exist yet, so content has definitely changed
-        return "\n## 🌱 **last week**\n\n<!--START_SECTION:waka-->\n\n<!--END_SECTION:waka-->\n"
+        return "\n## 🌱 **上周**\n\n<!--START_SECTION:waka-->\n\n<!--END_SECTION:waka-->\n"
 
 def data_print(blogs, issues):
     content = ''
