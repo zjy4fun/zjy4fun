@@ -1,4 +1,4 @@
-🌱 **last week**
+[![wakatime](https://wakatime.com/badge/user/702d7a0d-6421-40c6-be4d-9b18f6ca91d5.svg)](https://wakatime.com/@702d7a0d-6421-40c6-be4d-9b18f6ca91d5)
 
 <!--START_SECTION:waka-->
 

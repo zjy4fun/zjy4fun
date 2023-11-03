@@ -15,15 +15,17 @@ def get_bs(username, access_token):
     # ------------  START issues  ------------------
 
     # 得到一个人有多少仓库名字
-    repos_url = f'https://api.github.com/users/{username}/repos'
-    repos_response = requests.get(repos_url)
-    repos_name = []
-    if repos_response.status_code == 200:
-        repos = repos_response.json()
-        for repo in repos:
-            # add repo to repos_name
-            repos_name.append(repo['name'])
+    # repos_url = f'https://api.github.com/users/{username}/repos'
+    # repos_response = requests.get(repos_url)
+    # repos_name = []
+    # if repos_response.status_code == 200:
+    #     repos = repos_response.json()
+    #     for repo in repos:
+    #         # add repo to repos_name
+    #         repos_name.append(repo['name'])
 
+    # TODO 暂时只有一个仓库
+    repos_name = ['notes']
     issues = []
     for repo in repos_name:
         issues_url = f'https://api.github.com/repos/{username}/{repo}/issues'
@@ -37,43 +39,60 @@ def get_bs(username, access_token):
             issues.extend(issues_response.json())
     # ------------  END   issues  ------------------
 
-    # data_print(blogs, issues)
+    new_content = data_print(blogs, issues)
+
+    # Check if the content has changed before writing to README.md
+    if has_content_changed(new_content):
+        new_content += "🌱 **last week**\n\n<!--START_SECTION:waka-->\n\n<!--END_SECTION:waka-->\n"
+        write_to_readme(new_content)
+
+    data_print(blogs, issues)
+
+# TODO 优化版本比较算法
+def has_content_changed(new_content):
+    try:
+        with open('README.md', 'r') as f:
+            existing_content = f.read()
+            if "🌱 **last week**" in existing_content:
+                existing_content = existing_content.split("🌱 **last week**")[0]
+            return existing_content != new_content
+    except FileNotFoundError:
+        # README.md doesn't exist yet, so content has definitely changed
+        return True
 
 def data_print(blogs, issues):
+    content = ''
+    content += '<table style="width: 100%;">\n<td style="width: 60%">\n\n'
+    content += "📒 **notes**\n"
+    blog_count = 0
+
+    for day in blogs.select('div.day'):
+        for date in day.select('div.dayTitle a'):
+            for aritle in day.select('a.postTitle2'):
+                temp = date.text.replace('\n', '')
+                date_obj = datetime.strptime(temp, '%Y年%m月%d日')
+                new_date_str = date_obj.strftime('%Y-%m-%d')
+                if blog_count < 6:
+                    content += f'- `{new_date_str}`&nbsp;&nbsp;[{aritle.get_text().strip()}]({aritle.get("href")})\n'
+                    blog_count += 1
+    content += '\n</td>\n<td style="width: 60%">\n\n'
+    content += "\n🕛 **todo**\n"
+      # only show 6 issues
+    issues = issues[:6]
+    for issue in issues:
+        repo_name = issue['repository_url'].split("/")[-1]
+        username = issue['repository_url'].split("/")[-2]
+        content += f"- [{issue['title']}]({issue['html_url']}) `{repo_name}`\n"
+
+    content += '\n</td>\n</table>\n'
+
+    return content
+
+def write_to_readme(new_content):
     with open('README.md', 'w') as f:
         sys.stdout = f  # Change the standard output to the file we created.
-
-        print("🌱 **last week**\n\n<!--START_SECTION:waka-->\n\n<!--END_SECTION:waka-->", end='\n\n')
-
-        print('<table style="width: 100%;">\n<td style="width: 60%">\n\n')
-
-        print("📒 **notes**\n")
-        blog_count = 0
-        for day in blogs.select('div.day'):
-            for date in day.select('div.dayTitle a'):
-                for aritle in day.select('a.postTitle2'):
-                        temp = date.text.replace('\n', '')
-                        date_obj = datetime.strptime(temp, '%Y年%m月%d日')
-                        new_date_str = date_obj.strftime('%Y-%m-%d')
-                        if blog_count < 6:
-                            print('- `', new_date_str, '`&nbsp;&nbsp;[', aritle.get_text().strip(), '](', aritle.get('href'), ')', sep='')
-                            blog_count += 1
-
-        print('\n</td>\n<td style="width: 60%">\n\n')
-
-        print("\n🕛 **todo**\n")
-
-        # only show 6 issues
-        issues = issues[:6]
-        for issue in issues:
-            repo_name = issue['repository_url'].split("/")[-1]
-            username = issue['repository_url'].split("/")[-2]
-            print(f"- [{issue['title']}]({issue['html_url']}) `{repo_name}` ")
-
-        print('\n</td>\n</table>\n')
-
+        print(new_content, end='')
         sys.stdout = original_stdout  # Reset the standard output to its original value
-
 
 if __name__ == "__main__":
     access_token = sys.argv[1]
