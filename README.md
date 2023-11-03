@@ -1,7 +1,7 @@
 <table style="width: 100%;">
 <td style="width: 60%">
 
-## 📒 **notes**
+### 📒 **notes**
 - `2023-11-01`&nbsp;&nbsp;[tailwindcss 实现常见样式](https://www.cnblogs.com/zjy4fun/p/17804260.html)
 - `2023-10-29`&nbsp;&nbsp;[redux 简单入门](https://www.cnblogs.com/zjy4fun/p/17795394.html)
 - `2023-10-19`&nbsp;&nbsp;[vscode 加载 prettier 配置文件失败的问题](https://www.cnblogs.com/zjy4fun/p/17775994.html)
@@ -13,7 +13,7 @@
 <td style="width: 60%">
 
 
-## 🕛 **todo**
+### 🕛 **todo**
 - `2023-09-25`&nbsp;&nbsp;[【CSS】flex与宽高的关系](https://github.com/zjy4fun/notes/issues/61)
 - `2023-08-08`&nbsp;&nbsp;[【JS】【基础】JS中的generator和yield原理](https://github.com/zjy4fun/notes/issues/52)
 - `1990-01-01`&nbsp;&nbsp;[TODO](https://github.com/zjy4fun/notes/issues)
@@ -27,17 +27,5 @@
 ## 🌱 **last week**
 
 <!--START_SECTION:waka-->
-
-```txt
-From: 27 October 2023 - To: 03 November 2023
-
-Total Time: 51 hrs 55 mins
-
-TypeScript       38 hrs 40 mins  ██████████████████▓░░░░░░   74.48 %
-JavaScript       6 hrs 23 mins   ███░░░░░░░░░░░░░░░░░░░░░░   12.31 %
-Markdown         3 hrs 2 mins    █▒░░░░░░░░░░░░░░░░░░░░░░░   05.85 %
-Less             1 hr 10 mins    ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.27 %
-JSON             1 hr            ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.96 %
-```
 
 <!--END_SECTION:waka-->
