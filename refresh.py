@@ -32,7 +32,7 @@ def get_bs(username, access_token):
         params = {
             'labels': 'todo',
             'state': 'open',
-            'fields': 'title,html_url,repository_url'
+            'fields': 'title,html_url,repository_url',
         }
         issues_response = requests.get(issues_url, headers={'Authorization': f'token {access_token}'}, params=params)
         if issues_response.status_code == 200:
@@ -43,7 +43,7 @@ def get_bs(username, access_token):
 
     # Check if the content has changed before writing to README.md
     if has_content_changed(new_content):
-        new_content += "🌱 **last week**\n\n<!--START_SECTION:waka-->\n\n<!--END_SECTION:waka-->\n"
+        new_content += get_old_waka_data()
         write_to_readme(new_content)
 
     data_print(blogs, issues)
@@ -53,12 +53,25 @@ def has_content_changed(new_content):
     try:
         with open('README.md', 'r') as f:
             existing_content = f.read()
-            if "🌱 **last week**" in existing_content:
-                existing_content = existing_content.split("🌱 **last week**")[0]
+            if "\n🌱 **last week**" in existing_content:
+                existing_content = existing_content.split("\n🌱 **last week**")[0]
             return existing_content != new_content
     except FileNotFoundError:
         # README.md doesn't exist yet, so content has definitely changed
         return True
+
+def get_old_waka_data():
+    try:
+        with open('README.md', 'r') as f:
+            existing_content = f.read()
+            if "\n🌱 **last week**" in existing_content:
+                existing_content = existing_content.split("\n🌱 **last week**")[1]
+                return "\n🌱 **last week**" + existing_content
+            else:
+                return "\n🌱 **last week**\n\n<!--START_SECTION:waka-->\n\n<!--END_SECTION:waka-->\n"
+    except FileNotFoundError:
+        # README.md doesn't exist yet, so content has definitely changed
+        return "\n🌱 **last week**\n\n<!--START_SECTION:waka-->\n\n<!--END_SECTION:waka-->\n"
 
 def data_print(blogs, issues):
     content = ''
@@ -77,12 +90,16 @@ def data_print(blogs, issues):
                     blog_count += 1
     content += '\n</td>\n<td style="width: 60%">\n\n'
     content += "\n🕛 **todo**\n"
-      # only show 6 issues
+    # only show 6 issues
     issues = issues[:6]
+    # 如果 issuse 不足 6 个，用空位补齐
+    for i in range(6 - len(issues)):
+        issues.append({'title': 'TODO', 'html_url': '', 'repository_url': '', 'created_at': '1990-01-01'})
     for issue in issues:
         repo_name = issue['repository_url'].split("/")[-1]
         username = issue['repository_url'].split("/")[-2]
-        content += f"- [{issue['title']}]({issue['html_url']}) `{repo_name}`\n"
+        date = issue['created_at'].split("T")[0]
+        content += f"- `{date}`&nbsp;&nbsp;[{issue['title']}]({issue['html_url']}) `{repo_name}`\n"
 
     content += '\n</td>\n</table>\n'
 
