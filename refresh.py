@@ -52,7 +52,7 @@ def has_content_changed(new_content):
         with open('README.md', 'r') as f:
             existing_content = f.read()
             if "\n🌱 **last week**" in existing_content:
-                existing_content = existing_content.split("\n🌱 **last week**")[0]
+                existing_content = existing_content.split("\n## 🌱 **last week**")[0]
             return existing_content != new_content
     except FileNotFoundError:
         # README.md doesn't exist yet, so content has definitely changed
@@ -63,18 +63,18 @@ def get_old_waka_data():
         with open('README.md', 'r') as f:
             existing_content = f.read()
             if "\n🌱 **last week**" in existing_content:
-                existing_content = existing_content.split("\n🌱 **last week**")[1]
-                return "\n🌱 **last week**" + existing_content
+                existing_content = existing_content.split("\n## 🌱 **last week**")[1]
+                return "\n## 🌱 **last week**" + existing_content
             else:
-                return "\n🌱 **last week**\n\n<!--START_SECTION:waka-->\n\n<!--END_SECTION:waka-->\n"
+                return "\n## 🌱 **last week**\n\n<!--START_SECTION:waka-->\n\n<!--END_SECTION:waka-->\n"
     except FileNotFoundError:
         # README.md doesn't exist yet, so content has definitely changed
-        return "\n🌱 **last week**\n\n<!--START_SECTION:waka-->\n\n<!--END_SECTION:waka-->\n"
+        return "\n## 🌱 **last week**\n\n<!--START_SECTION:waka-->\n\n<!--END_SECTION:waka-->\n"
 
 def data_print(blogs, issues):
     content = ''
     content += '<table style="width: 100%;">\n<td style="width: 60%">\n\n'
-    content += "📒 **notes**\n"
+    content += "## 📒 **notes**\n"
     blog_count = 0
 
     for day in blogs.select('div.day'):
@@ -87,7 +87,7 @@ def data_print(blogs, issues):
                     content += f'- `{new_date_str}`&nbsp;&nbsp;[{aritle.get_text().strip()}]({aritle.get("href")})\n'
                     blog_count += 1
     content += '\n</td>\n<td style="width: 60%">\n\n'
-    content += "\n🕛 **todo**\n"
+    content += "\n## 🕛 **todo**\n"
     # only show 6 issues
     issues = issues[:6]
     # 如果 issuse 不足 6 个，用空位补齐
