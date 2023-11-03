@@ -39,7 +39,7 @@ jobs:
   wakatime:
     name: update wakatime data
     runs-on: ubuntu-latest
-    # needs: blog
+    needs: blog
     steps:
       - uses: athul/waka-readme@master
         with:
