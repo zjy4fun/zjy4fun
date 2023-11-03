@@ -74,7 +74,7 @@ def get_old_waka_data():
 def data_print(blogs, issues):
     content = ''
     content += '<table style="width: 100%;">\n<td style="width: 60%">\n\n'
-    content += "## 📒 **notes**\n"
+    content += "### 📒 **notes**\n"
     blog_count = 0
 
     for day in blogs.select('div.day'):
@@ -87,7 +87,7 @@ def data_print(blogs, issues):
                     content += f'- `{new_date_str}`&nbsp;&nbsp;[{aritle.get_text().strip()}]({aritle.get("href")})\n'
                     blog_count += 1
     content += '\n</td>\n<td style="width: 60%">\n\n'
-    content += "\n## 🕛 **todo**\n"
+    content += "\n### 🕛 **todo**\n"
     # only show 6 issues
     issues = issues[:6]
     # 如果 issuse 不足 6 个，用空位补齐
