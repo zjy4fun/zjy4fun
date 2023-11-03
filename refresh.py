@@ -46,8 +46,6 @@ def get_bs(username, access_token):
         new_content += get_old_waka_data()
         write_to_readme(new_content)
 
-    data_print(blogs, issues)
-
 # TODO 优化版本比较算法
 def has_content_changed(new_content):
     try:
@@ -94,12 +92,12 @@ def data_print(blogs, issues):
     issues = issues[:6]
     # 如果 issuse 不足 6 个，用空位补齐
     for i in range(6 - len(issues)):
-        issues.append({'title': 'TODO', 'html_url': '', 'repository_url': '', 'created_at': '1990-01-01'})
+        issues.append({'title': 'TODO', 'html_url': 'https://github.com/zjy4fun/notes/issues', 'repository_url': '', 'created_at': '1990-01-01'})
     for issue in issues:
-        repo_name = issue['repository_url'].split("/")[-1]
-        username = issue['repository_url'].split("/")[-2]
+        # repo_name = issue['repository_url'].split("/")[-1]
+        # username = issue['repository_url'].split("/")[-2]
         date = issue['created_at'].split("T")[0]
-        content += f"- `{date}`&nbsp;&nbsp;[{issue['title']}]({issue['html_url']}) `{repo_name}`\n"
+        content += f"- `{date}`&nbsp;&nbsp;[{issue['title']}]({issue['html_url']})\n"
 
     content += '\n</td>\n</table>\n'
 
