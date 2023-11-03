@@ -3,7 +3,7 @@ name: Update Readme
 on:
   push:
   schedule:
-    - cron: '00 00 * * *'
+    - cron: '0 8-23 * * *'
 
 jobs:
   blog:

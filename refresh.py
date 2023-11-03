@@ -73,8 +73,20 @@ def get_old_waka_data():
 
 def data_print(blogs, issues):
     content = ''
+    content += "## 🕛 **待办**\n"
+    # only show 6 issues
+    issues = issues[:10]
+    # 如果 issuse 不足 6 个，用空位补齐
+    # for i in range(6 - len(issues)):
+    #     issues.append({'title': 'TODO', 'html_url': 'https://github.com/zjy4fun/notes/issues', 'repository_url': '', 'created_at': '1990-01-01'})
+    for issue in issues:
+        # repo_name = issue['repository_url'].split("/")[-1]
+        # username = issue['repository_url'].split("/")[-2]
+        date = issue['created_at'].split("T")[0]
+        content += f"- `{date}`&nbsp;&nbsp;[{issue['title']}]({issue['html_url']})\n"
+
     # content += '<table style="width: 100%;">\n<td style="width: 60%">\n\n'
-    content += "## 📒 **笔记**\n"
+    content += "\n## 📒 **笔记**\n"
     blog_count = 0
 
     for day in blogs.select('div.day'):
@@ -87,17 +99,6 @@ def data_print(blogs, issues):
                     content += f'- `{new_date_str}`&nbsp;&nbsp;[{aritle.get_text().strip()}]({aritle.get("href")})\n'
                     blog_count += 1
     # content += '\n</td>\n<td style="width: 60%">\n\n'
-    content += "\n## 🕛 **待办**\n"
-    # only show 6 issues
-    issues = issues[:10]
-    # 如果 issuse 不足 6 个，用空位补齐
-    # for i in range(6 - len(issues)):
-    #     issues.append({'title': 'TODO', 'html_url': 'https://github.com/zjy4fun/notes/issues', 'repository_url': '', 'created_at': '1990-01-01'})
-    for issue in issues:
-        # repo_name = issue['repository_url'].split("/")[-1]
-        # username = issue['repository_url'].split("/")[-2]
-        date = issue['created_at'].split("T")[0]
-        content += f"- `{date}`&nbsp;&nbsp;[{issue['title']}]({issue['html_url']})\n"
 
     # content += '\n</td>\n</table>\n'
 
