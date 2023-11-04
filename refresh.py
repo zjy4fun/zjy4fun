@@ -51,7 +51,7 @@ def has_content_changed(new_content):
     try:
         with open('README.md', 'r') as f:
             existing_content = f.read()
-            if "\n🌱 **上周**" in existing_content:
+            if "\n## 🌱 **上周**" in existing_content:
                 existing_content = existing_content.split("\n## 🌱 **上周**")[0]
             return existing_content != new_content
     except FileNotFoundError:
