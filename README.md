@@ -1,4 +1,4 @@
-## 🕛 **待办**
+<!-- ## 🕛 **待办**
 - `2023-11-03`&nbsp;&nbsp;[实现白色卡片，遍历带边距](https://github.com/zjy4fun/notes/issues/86)
 - `2023-11-03`&nbsp;&nbsp;[实现一个文字弹性容器，宽度和高度根据文字内容伸缩](https://github.com/zjy4fun/notes/issues/85)
 - `2023-11-03`&nbsp;&nbsp;[了解一下 redux 的浅复制](https://github.com/zjy4fun/notes/issues/84)
@@ -18,7 +18,7 @@
 - `2023-09-11`&nbsp;&nbsp;[快速初始化Vue3项目终端工具 x-init](https://www.cnblogs.com/zjy4fun/p/17694300.html)
 - `2023-09-10`&nbsp;&nbsp;[【JS】数组扁平化](https://www.cnblogs.com/zjy4fun/p/17692088.html)
 
-## 🌱 **上周**
+## 🌱 **上周** -->
 
 <!--START_SECTION:waka-->
 
