@@ -23,6 +23,10 @@
 <!--START_SECTION:waka-->
 
 ```txt
+From: 26 November 2023 - To: 03 December 2023
+
+Total Time: 50 hrs 20 mins
+
 TypeScript       44 hrs 39 mins  ██████████████████████▒░░   88.70 %
 Java             1 hr 37 mins    ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.23 %
 JSON             1 hr 32 mins    ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.05 %
