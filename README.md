@@ -23,11 +23,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 10 February 2024 - To: 17 February 2024
+From: 11 February 2024 - To: 18 February 2024
 
-Total Time: 0 secs
+Total Time: 8 hrs 32 mins
 
-No activity tracked
+TypeScript        6 hrs 36 mins   ███████████████████▒░░░░░   77.39 %
+YAML              47 mins         ██▒░░░░░░░░░░░░░░░░░░░░░░   09.37 %
+JSON              22 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   04.34 %
+JavaScript        15 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.94 %
+Text              10 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.09 %
 ```
 
 <!--END_SECTION:waka-->
