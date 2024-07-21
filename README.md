@@ -3,14 +3,14 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 12 July 2024 - To: 19 July 2024
+From: 13 July 2024 - To: 20 July 2024
 
 Total Time: 29 hrs 40 mins
 
-TypeScript       26 hrs 54 mins  ██████████████████████▓░░   90.71 %
+TypeScript       26 hrs 54 mins  ██████████████████████▓░░   90.67 %
 JavaScript       1 hr 6 mins     █░░░░░░░░░░░░░░░░░░░░░░░░   03.75 %
-Python           26 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.48 %
-Markdown         22 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.26 %
+Python           26 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.47 %
+Markdown         23 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.31 %
 JSON             16 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.93 %
 ```
 
