@@ -3,11 +3,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 05 September 2024 - To: 12 September 2024
+From: 06 September 2024 - To: 13 September 2024
 
-Total Time: 0 secs
+Total Time: 46 mins
 
-No activity tracked
+TypeScript   24 mins         █████████████▒░░░░░░░░░░░   53.11 %
+JavaScript   12 mins         ██████▓░░░░░░░░░░░░░░░░░░   26.92 %
+Markdown     5 mins          ███░░░░░░░░░░░░░░░░░░░░░░   12.09 %
+HTML         3 mins          ██░░░░░░░░░░░░░░░░░░░░░░░   07.39 %
+TSConfig     0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.36 %
 ```
 
 <!--END_SECTION:waka-->
