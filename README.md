@@ -3,15 +3,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 21 September 2024 - To: 28 September 2024
+From: 22 September 2024 - To: 29 September 2024
 
-Total Time: 7 hrs 32 mins
+Total Time: 5 hrs 25 mins
 
-TypeScript       3 hrs 13 mins   ██████████▓░░░░░░░░░░░░░░   42.67 %
-JavaScript       2 hrs 3 mins    ██████▓░░░░░░░░░░░░░░░░░░   27.33 %
-JSON             1 hr 5 mins     ███▓░░░░░░░░░░░░░░░░░░░░░   14.56 %
-Markdown         29 mins         █▓░░░░░░░░░░░░░░░░░░░░░░░   06.48 %
-Vue.js           11 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.54 %
+TypeScript   2 hrs 4 mins    █████████▓░░░░░░░░░░░░░░░   38.34 %
+JavaScript   2 hrs 1 min     █████████▒░░░░░░░░░░░░░░░   37.30 %
+JSON         43 mins         ███▒░░░░░░░░░░░░░░░░░░░░░   13.50 %
+Vue.js       11 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   03.54 %
+HTML         9 mins          ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.01 %
 ```
 
 <!--END_SECTION:waka-->
