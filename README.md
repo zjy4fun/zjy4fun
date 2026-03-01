@@ -23,9 +23,6 @@
 ### 🧰 技术栈
 `TypeScript` `JavaScript` `Swift` `React Native` `Expo` `Electron` `AI Workflow` `GitHub Actions`
 
-### 📊 Codex 使用统计（近 30 天）
-![Codex Usage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zjy4fun/zjy4fun/main/badges/codex-usage.json)
-
 ### 📌 关于这个主页
 本 README 每月自动刷新，尽量基于公开仓库的最近活动与项目描述保持事实一致。
 
