@@ -25,6 +25,7 @@ jobs:
 
       - name: Build codex usage badge json
         env:
+          OPENAI_ADMIN_API_KEY: ${{ secrets.OPENAI_ADMIN_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_ORG_ID: ${{ secrets.OPENAI_ORG_ID }}
           LOOKBACK_DAYS: "30"

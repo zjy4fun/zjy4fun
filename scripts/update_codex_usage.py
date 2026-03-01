@@ -5,13 +5,13 @@ from typing import Any, Dict, List
 
 import requests
 
-API_KEY = os.environ.get("OPENAI_API_KEY", "").strip()
+API_KEY = (os.environ.get("OPENAI_ADMIN_API_KEY") or os.environ.get("OPENAI_API_KEY") or "").strip()
 ORG_ID = os.environ.get("OPENAI_ORG_ID", "").strip()
 LOOKBACK_DAYS = int(os.environ.get("LOOKBACK_DAYS", "30"))
 MODEL_KEYWORD = os.environ.get("CODEX_MODEL_KEYWORD", "codex").lower().strip()
 
 if not API_KEY:
-    raise SystemExit("OPENAI_API_KEY is required")
+    raise SystemExit("OPENAI_ADMIN_API_KEY (or OPENAI_API_KEY) is required")
 
 headers = {
     "Authorization": f"Bearer {API_KEY}",
@@ -116,8 +116,29 @@ def main() -> None:
         tokens, cost = summarize(usage_items, cost_items)
         write_badge_json(tokens, cost)
         print(f"Updated badge: tokens={tokens}, cost=${cost:.2f}")
+    except requests.HTTPError as e:
+        code = e.response.status_code if e.response is not None else "?"
+        # Most common: 403 means key lacks org usage permission.
+        if code == 403:
+            msg = "forbidden (need org admin key)"
+        elif code == 401:
+            msg = "unauthorized (check API key)"
+        else:
+            msg = f"http {code}"
+
+        os.makedirs("badges", exist_ok=True)
+        payload = {
+            "schemaVersion": 1,
+            "label": "codex usage",
+            "message": msg,
+            "color": "orange",
+        }
+        with open("badges/codex-usage.json", "w", encoding="utf-8") as f:
+            json.dump(payload, f, ensure_ascii=False, indent=2)
+        print(f"WARN: {msg}")
+        return
     except Exception as e:
-        # Fail-safe: keep workflow green with explicit status badge message
+        # Keep workflow green with explicit status badge message
         os.makedirs("badges", exist_ok=True)
         payload = {
             "schemaVersion": 1,
@@ -127,7 +148,8 @@ def main() -> None:
         }
         with open("badges/codex-usage.json", "w", encoding="utf-8") as f:
             json.dump(payload, f, ensure_ascii=False, indent=2)
-        raise
+        print(f"WARN: update failed: {e}")
+        return
 
 
 if __name__ == "__main__":
