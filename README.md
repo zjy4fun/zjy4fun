@@ -9,15 +9,15 @@
 ### 🔭 近期重点项目（按最近代码更新）
 <!-- RECENT_PROJECTS_START -->
 - [json-open](https://github.com/zjy4fun/json-open)  
-  Open JSON from stdin or inline text in browser with collapsible tree view（最近更新：2026-03-01）
+  Open JSON from stdin or inline text in browser with collapsible tree view（最近更新：2026-03-02）
+- [llm-chat](https://github.com/zjy4fun/llm-chat)  
+  一个最小可运行的 LLM Chat 全链路 Demo（最近更新：2026-03-02）
 - [polish-chrome-extension](https://github.com/zjy4fun/polish-chrome-extension)  
   一个轻量级 Chrome 扩展，用 AI 一键润色选中文本或输入框内容，让表达更清晰、更专业。（最近更新：2026-02-23）
 - [polish-macos](https://github.com/zjy4fun/polish-macos)  
   一个 macOS 剪切板文本润色工具：一键生成简化版、优化表述和 commit message（支持 OpenAI/Codex/Claude）（最近更新：2026-02-22）
 - [QuickPhrase](https://github.com/zjy4fun/QuickPhrase)  
   最近有代码更新。（最近更新：2025-12-08）
-- [expo-rn-camera-demo](https://github.com/zjy4fun/expo-rn-camera-demo)  
-  最近有代码更新。（最近更新：2025-06-12）
 <!-- RECENT_PROJECTS_END -->
 
 ### 🧰 技术栈
