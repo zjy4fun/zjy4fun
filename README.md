@@ -1,30 +1,29 @@
 <h1 align="center">你好，我是 zjy4fun 👋</h1>
 
 <p align="center">
-  热衷把想法做成可用工具，关注 AI 效率、文本润色与跨端体验。
+  专注把想法快速做成可用产品，近期主要在做 AI 工具化、文本体验和前端交互实验。
 </p>
 
 ---
 
-### 🔭 近期重点项目（按最近代码更新）
-<!-- RECENT_PROJECTS_START -->
+### 🚀 当前代表项目（公开仓库）
 - [json-open](https://github.com/zjy4fun/json-open)  
-  Open JSON from stdin or inline text in browser with collapsible tree view（最近更新：2026-03-02）
+  在终端或文本中快速打开 JSON，并以可折叠树形视图浏览。
 - [llm-chat](https://github.com/zjy4fun/llm-chat)  
-  一个最小可运行的 LLM Chat 全链路 Demo（最近更新：2026-03-02）
-- [polish-chrome-extension](https://github.com/zjy4fun/polish-chrome-extension)  
-  一个轻量级 Chrome 扩展，用 AI 一键润色选中文本或输入框内容，让表达更清晰、更专业。（最近更新：2026-02-23）
+  最小可运行的 LLM Chat 全链路 Demo。
 - [polish-macos](https://github.com/zjy4fun/polish-macos)  
-  一个 macOS 剪切板文本润色工具：一键生成简化版、优化表述和 commit message（支持 OpenAI/Codex/Claude）（最近更新：2026-02-22）
-- [QuickPhrase](https://github.com/zjy4fun/QuickPhrase)  
-  最近有代码更新。（最近更新：2025-12-08）
-<!-- RECENT_PROJECTS_END -->
+  macOS 剪贴板文本润色工具，支持多模型（OpenAI/Codex/Claude）。
+- [polish-chrome-extension](https://github.com/zjy4fun/polish-chrome-extension)  
+  Chrome 扩展，一键润色选中文本或输入框内容。
 
-### 🧰 技术栈
-`TypeScript` `JavaScript` `Swift` `React Native` `Expo` `Electron` `AI Workflow` `GitHub Actions`
+### 🧪 最近在尝试
+- [react-joyride-onboarding-demo](https://github.com/zjy4fun/react-joyride-onboarding-demo) — React 引导式新手教程流程 Demo。
 
-### 📌 关于这个主页
-本 README 每月自动刷新，尽量基于公开仓库的最近活动与项目描述保持事实一致。
+### 🧰 技术关键词
+`TypeScript` `JavaScript` `Swift` `React` `Chrome Extension` `LLM` `Prompt Engineering` `DX`
+
+### 📌 说明
+本页会按公开仓库活动定期更新，只记录已存在且可验证的项目。
 
 ---
 
