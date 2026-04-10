@@ -4,8 +4,6 @@
   Turning ideas into usable products fast. Currently building AI tools, developer utilities, and full-stack experiments.
 </p>
 
----
-
 ### 🔥 Recent
 
 - [**devhub**](https://zjy4fun.github.io/devhub/) — Developer environment config TUI. Manage Git, SSH, env vars, Node.js and dev tools from one terminal.
@@ -17,8 +15,3 @@
 
 `TypeScript` `JavaScript` `Swift` `Python` `React` `Rust` `Docker` `Chrome Extension` `LLM` `Prompt Engineering` `TUI`
 
----
-
-<p align="center">
-  📍 <a href="https://zjy4fun.github.io/nav/">All projects</a>
-</p>
